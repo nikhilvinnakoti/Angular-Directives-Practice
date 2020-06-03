@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+    <img [src]="data.imageUrl" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{data.userName}}</h5>
+      <p [ngClass]="{lowprice:data.price<=100,highprice:data.price>=200}">Price:{{data.price}}</p>
+      <span *ngIf = "data.stock==true">In stock</span>
+      <span *ngIf = "data.stock==false">Out of stock</span>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Click Me</a>
+    </div>
+  </div>
+
